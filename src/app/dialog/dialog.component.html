@@ -1,0 +1,68 @@
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div class="col-12">
+    <mat-card class="example-card">
+      <mat-card-header class="Text-title-loc1">
+        <mat-card-title>ประวัติส่วนตัว</mat-card-title>
+      </mat-card-header>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="เลขที่บัตรประจำตัวประชาชน"[(ngModel)]="student.pid" name="studentid">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="ชื่อ-นามสกุล" [(ngModel)]="student.fullname" name="studentfullname">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1">
+          <input matInput placeholder="เพศ" name="studentsex">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="สัญชาติ" name="studentnationality">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1">
+          <input matInput placeholder="วัน/เดือน/ปีเกิด" name="studentbirthday">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="สถานที่เกิด" name="studentbirthplace">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1">
+          <input matInput placeholder="บุตรลำดับที่" name="studentnumberson">
+        </mat-form-field>
+        <h5 class="h5-font">มารดา</h5>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="เลขที่บัตรประจำตัวประชาชน" name="motherid">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="ชื่อ-นามสกุล" name="motherfullname">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1">
+          <input matInput placeholder="อายุ" name="motherage">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="สัญชาติ" name="mothernationality">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1">
+          <input matInput placeholder="ที่อยู่" name="motheraddress">
+        </mat-form-field>
+        <h5 class="h5-font">บิดา</h5>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="เลขที่บัตรประจำตัวประชาชน" name="fatherid">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="ชื่อ-นามสกุล" name="fatherfullname">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1">
+          <input matInput placeholder="อายุ" name="fatherage">
+        </mat-form-field>
+        <mat-form-field class="Text-edit">
+          <input matInput placeholder="สัญชาติ" name="fathernationality">
+        </mat-form-field>
+        <mat-form-field class="Text-edit1" name="fatheraddress">
+          <input matInput placeholder="ที่อยู่">
+        </mat-form-field>
+      </div>
+    </mat-card>
+    <div>
+      <button mat-raised-button color="accent" class="btndialog" (click)="close()">ยกเลิก</button> &nbsp;
+      <button mat-raised-button color="primary" (click)="closeoncilck()">บันทึก</button>
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>

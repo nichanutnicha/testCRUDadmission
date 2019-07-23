@@ -1,0 +1,31 @@
+<div class="row" *ngIf="students.length === 0">
+  <img src="https://www.flaticon.com/premium-icon/icons/svg/1925/1925252.svg" class="btn-addnewbig" (click)="openDialog()">
+</div>
+
+<div class="row" *ngIf="students.length > 0">
+  <div class="col-12">
+    <div><button mat-raised-button color="primary" class="btn-addnewsmall" (click)="openDialog()"> 
+        <mat-icon>add_circle_outline</mat-icon>&nbsp;เพิ่มข้อมูลผู้สมัครเรียน
+      </button>
+
+      <div class="row">
+        <table>
+          <thead>
+            <th>ลำดับ</th>
+            <th>ชื่อ สกุล</th>
+            <th>เลขบัตรประชาชน</th>
+            <th>จัดการ</th>
+          </thead>
+          <tr *ngFor="let student of students">
+            <td>{{student.num}}</td>
+            <td>{{student.fullname}}</td>
+            <td>{{student.pid}}</td>
+            <td><button>แก้ไข</button></td>
+            <td><button>ดาวน์โหลด</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
